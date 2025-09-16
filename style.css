@@ -1,0 +1,254 @@
+/* === DARK THEME === */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #121212;
+  color: #eee;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* === КОНТЕЙНЕРЫ === */
+.container,
+.all-portfolio-container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.form-title {
+  text-align: center;
+  padding: 50px 0 20px 0;
+}
+
+/* === ФОРМА === */
+form {
+  max-width: 600px;
+  width: 100%;
+  background: #1e1e1e;
+  color: #eee;
+  padding: 40px;
+  margin: auto;
+  border-radius: 24px;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="file"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  background: #2a2a2a;
+  color: #eee;
+  border: 1px solid #444;
+  border-radius: 12px;
+  font-size: 15px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #d8ff4f;
+  outline: none;
+}
+
+button {
+  padding: 12px 24px;
+  background-color: #d8ff4f;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: #000;
+}
+
+button:hover {
+  background-color: #c2eb34;
+}
+
+/* === ПРОФИЛЬ === */
+.profile,
+.info,
+.card {
+  background: #1e1e1e;
+  border-radius: 30px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.05);
+  color: #eee;
+}
+
+.profile {
+  flex: 0 0 300px;
+  text-align: center;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.role {
+  color: #999;
+  font-size: 16px;
+}
+
+/* === ИНФО-ПАНЕЛЬ === */
+.info {
+  flex: 1;
+  min-width: 300px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+h2 {
+  margin-top: 30px;
+  font-size: 20px;
+  color: #ccc;
+}
+
+/* === СПИСКИ === */
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+ul.skills li::before {
+  content: '🟢';
+  margin-right: 8px;
+}
+
+.badge {
+  background: #2e2e2e;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #d8ff4f;
+}
+
+/* === ПРОЕКТЫ === */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.project-box {
+  background: #2a2a2a;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  transition: transform 0.2s ease;
+  color: #eee;
+}
+
+.project-box:hover {
+  transform: scale(1.02);
+}
+
+.project-box h3 {
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.project-box p {
+  font-size: 15px;
+  color: #ccc;
+  flex-grow: 1;
+  margin-bottom: 15px;
+}
+
+.project-box a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #d8ff4f;
+}
+
+/* === КАРТОЧКИ /all === */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+
+.card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card a {
+  text-decoration: none;
+  color: #d8ff4f;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+.bio-preview {
+  font-size: 14px;
+  color: #999;
+  margin-top: 8px;
+}
+
+/* === КНОПКИ === */
+.button-secondary {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: transparent;
+  color: #d8ff4f;
+  border: 2px solid #d8ff4f;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.button-secondary:hover {
+  background-color: #d8ff4f;
+  color: #121212;
+}
+
+/* === ОБЩИЙ КОНТЕЙНЕР ДЛЯ СТРАНИЦЫ ПОРТФОЛИО === */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}

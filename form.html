@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание портфолио</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1 class="form-title">Создай своё портфолио</h1>
+
+    <form
+action="{{ url_for('generate')}}"
+method="POST" enctype="multipart/form-data">
+
+        <label for="name">Имя</label>
+
+        <input type="text" id="name" name="name" placeholder="Введите имя">
+
+        <label for="bio">О себе</label>
+
+        <textarea id="bio" name="bio" rows="3" placeholder="Краткая биография..."></textarea>
+
+        <label for="skills">Навыки</label>
+
+        <input type="text" id="skills" name="skills" placeholder="Python, Flask, SQL">
+
+        <label for="github">Github</label>
+
+        <input type="text" id="github" name="github" placeholder="username">
+
+        <label for="telegram">Telegram</label>
+
+        <input type="text" id="telegram" name="telegram" placeholder="@nickname">
+
+        <label for="avatar">Аватар</label>
+
+        <input type="file"  id="avatar" name="avatar" accept="image/*">
+
+        <button type="submit">Создать</button>
+
+
+
+</body>
+</html>
+

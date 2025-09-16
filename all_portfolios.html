@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Все портфолио</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <form method="GET" style="max-width: 80%;">
+        <select class="form-select" name="skills" onchange="this.form.submit()">
+            <option value="">- Все навыки -</option>
+            {% for tech in tool_icons %}
+                <option value="{{ tech }}"
+                 {% if tech.lower() == current_skills %}selected{% endif %}>{{ tech }}
+                </option>
+            {% endfor %}
+        </select>
+    </form>
+
+    <div class="all-portfolio-container">
+        <h1 class="all-title">Все портфолио</h1>
+
+        <div class="grid">
+            {% for uuid, name, avatar, bio, skills in portfolios %}
+                <div class="card">
+                    <img src="{{ url_for('static', filename=avatar or 'uploads/placeholder.png') }}"
+                         alt="{{ name }}">
+
+                    <!-- Ссылка на персональное портфолио -->
+                    <a href="{{ url_for('view_portfolio', uuid=uuid) }}" target="_blank">
+                        {{ name }}
+                    </a>
+
+                    <p class="bio-preview">{{ bio }}</p>
+
+                    <div class="tool-list">
+                        {% for tech, icon in tool_icons.items() %}
+                            {% if tech in skills %}
+                                <span class="badge">{{ icon }} {{ tech }}</span>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            {% else %}
+                <p>Пользователи не найдены.</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+        <a href="{{ url_for('form_page') }}" class="button-secondary">
+            Создать новое портфолио
+        </a>
+    </div>
+</body>
+</html>
