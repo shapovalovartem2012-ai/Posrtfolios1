@@ -16,7 +16,8 @@
 
 ## Скриншоты
 ### Страница со всеми портфолио
-![Все портфолио](https://github.com/username/portfolio/blob/main/screenshots/portfolio-list.png)
+<img width="1235" height="763" alt="image" src="https://github.com/user-attachments/assets/b97356f6-3809-49eb-b3c5-3d0ded7f9140" />
+<img width="1062" height="689" alt="image" src="https://github.com/user-attachments/assets/4753450e-d3be-469d-82d8-f9cb576bf408" />
+<img width="726" height="838" alt="image" src="https://github.com/user-attachments/assets/05cd6af1-dce6-47b6-ae7e-04c0dde8b04d" />
 
-### Создание нового портфолио
-![Создание портфолио](https://github.com/username/portfolio/blob/main/screenshots/portfolio-create.png)
+
